@@ -1,34 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export default function About() {
-  const [myStyle, setMyStyle] = useState({
-    color: 'black',
-    backgroundColor: 'white',
-  });
-
-  const [btnText, setBtnText] = useState('Enable Dark Mode');
-
-  const togglePageStyle = () => {
-    if (myStyle.color === 'white') {
-      setMyStyle({
-        color: 'black',
-        backgroundColor: 'white',
-        // border: '1px solid black',
-      });
-      setBtnText('Enable Dark Mode');
-    } else {
-      setMyStyle({
-        color: 'white',
-        backgroundColor: 'black',
-        border: '1px solid white',
-      });
-      setBtnText('Disable Dark Mode');
-    }
+export default function About(props) {
+  let myStyle = {
+    color: props.mode === 'dark' ? 'white' : '#12195c',
+    backgroundColor: props.mode === 'dark' ? 'rgb(121 126 173)' : 'white',
   };
 
   return (
     <div>
-      <div className="container" style={myStyle}>
+      <div
+        className="container"
+        style={{ color: props.mode === 'dark' ? 'white' : '#12195c' }}
+      >
         <h2>About Us</h2>
         <div className="accordion" id="accordionExample" style={myStyle}>
           <div className="accordion-item" style={myStyle}>
@@ -42,7 +25,7 @@ export default function About() {
                 aria-controls="collapseOne"
                 style={myStyle}
               >
-                Accordion Item #1
+                <strong>Analyze your text</strong>
               </button>
             </h2>
             <div
@@ -74,7 +57,7 @@ export default function About() {
                 aria-controls="collapseTwo"
                 style={myStyle}
               >
-                Accordion Item #2
+                Free to use
               </button>
             </h2>
             <div
@@ -106,7 +89,7 @@ export default function About() {
                 aria-controls="collapseThree"
                 style={myStyle}
               >
-                Accordion Item #3
+                Browser Compatible
               </button>
             </h2>
             <div
@@ -128,15 +111,6 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="container my-3">
-        <button
-          type="button"
-          onClick={togglePageStyle}
-          className="btn btn-primary"
-        >
-          {btnText}
-        </button>
       </div>
     </div>
   );
