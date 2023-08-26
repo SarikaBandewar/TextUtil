@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/TextUtil/static/css/main.073c9b0a.css",
-    "main.js": "/TextUtil/static/js/main.9eedb5aa.js",
-    "static/js/787.719ec76d.chunk.js": "/TextUtil/static/js/787.719ec76d.chunk.js",
-    "static/media/logo.svg": "/TextUtil/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/TextUtil/index.html",
-    "main.073c9b0a.css.map": "/TextUtil/static/css/main.073c9b0a.css.map",
-    "main.9eedb5aa.js.map": "/TextUtil/static/js/main.9eedb5aa.js.map",
-    "787.719ec76d.chunk.js.map": "/TextUtil/static/js/787.719ec76d.chunk.js.map"
+    "main.css": "/TextUtil-React/static/css/main.073c9b0a.css",
+    "main.js": "/TextUtil-React/static/js/main.b4706463.js",
+    "static/js/787.719ec76d.chunk.js": "/TextUtil-React/static/js/787.719ec76d.chunk.js",
+    "static/media/logo.svg": "/TextUtil-React/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/TextUtil-React/index.html",
+    "main.073c9b0a.css.map": "/TextUtil-React/static/css/main.073c9b0a.css.map",
+    "main.b4706463.js.map": "/TextUtil-React/static/js/main.b4706463.js.map",
+    "787.719ec76d.chunk.js.map": "/TextUtil-React/static/js/787.719ec76d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.9eedb5aa.js"
+    "static/js/main.b4706463.js"
   ]
 }
