@@ -25,7 +25,6 @@ export default function TextForm(props) {
   };
 
   const [text, setText] = useState('Enter Text Here');
-  //   setText('new text');
 
   return (
     <>
@@ -77,7 +76,7 @@ export default function TextForm(props) {
           <h2>Your Text Summary</h2>
           <p>
             {
-              text.split(' ').filter((elem) => {
+              text.split(/\s+/).filter((elem) => {
                 return elem.length !== 0;
               }).length
             }{' '}
@@ -85,7 +84,7 @@ export default function TextForm(props) {
           </p>
           <p>
             {0.008 *
-              text.split(' ').filter((elem) => {
+              text.split(/\s+/).filter((elem) => {
                 return elem.length !== 0;
               }).length}{' '}
             minutes read
