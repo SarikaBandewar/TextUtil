@@ -19,16 +19,29 @@ function MyApp() {
     }, 2000);
   };
 
-  const toggleMode = () => {
-    if (mode === 'light') {
-      setMode('dark');
-      document.body.style.backgroundColor = '#12195c';
-      showAlert('Dark mode enabled!!', 'success');
-    } else {
-      setMode('light');
-      document.body.style.backgroundColor = 'white';
-      showAlert('Light mode enabled!!', 'success');
-    }
+  const removeBodyClasses = () => {
+    document.body.classList.remove('bg-success');
+    document.body.classList.remove('bg-warning');
+    document.body.classList.remove('bg-danger');
+    document.body.classList.remove('bg-primary');
+    document.body.classList.remove('bg-light');
+    document.body.classList.remove('bg-dark');
+  };
+  const toggleMode = (cls) => {
+    removeBodyClasses();
+    // if (cls === null) {
+    //   if (mode === 'light') {
+    //     setMode('dark');
+    //     document.body.style.backgroundColor = '#12195c';
+    //     showAlert('Dark mode enabled!!', 'success');
+    //   } else {
+    //     setMode('light');
+    //     document.body.style.backgroundColor = 'white';
+    //     showAlert('Light mode enabled!!', 'success');
+    //   }
+    // } else {
+    document.body.classList.add('bg-' + cls);
+    // }
   };
   return (
     <>

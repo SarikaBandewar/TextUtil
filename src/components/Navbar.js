@@ -35,7 +35,51 @@ export default function Navbar(props) {
               </a>
             </li>
           </ul>
-          <div
+          <div className="d-flex">
+            <div
+              className="bg-primary rounded mx-2"
+              style={{ height: '30px', width: '30px' }}
+              onClick={() => {
+                props.toggleMode('primary');
+              }}
+            ></div>
+            <div
+              className="bg-danger rounded mx-2"
+              style={{ height: '30px', width: '30px' }}
+              onClick={() => {
+                props.toggleMode('danger');
+              }}
+            ></div>
+            <div
+              className="bg-success rounded mx-2"
+              style={{ height: '30px', width: '30px' }}
+              onClick={() => {
+                props.toggleMode('success');
+              }}
+            ></div>
+            <div
+              className="bg-warning rounded mx-2"
+              style={{ height: '30px', width: '30px' }}
+              onClick={() => {
+                props.toggleMode('warning');
+              }}
+            ></div>
+            <div
+              className="bg-dark rounded mx-2"
+              style={{ height: '30px', width: '30px' }}
+              onClick={() => {
+                props.toggleMode('dark');
+              }}
+            ></div>
+            <div
+              className="bg-light rounded mx-2"
+              style={{ height: '30px', width: '30px' }}
+              onClick={() => {
+                props.toggleMode('light');
+              }}
+            ></div>
+          </div>
+          {/* <div
             className={`form-check form-switch text-${
               props.mode === 'light' ? 'dark' : 'light'
             }`}
@@ -45,15 +89,17 @@ export default function Navbar(props) {
               type="checkbox"
               role="switch"
               id="flexSwitchCheckDefault"
-              onClick={props.toggleMode}
+              onClick={() => {
+                props.toggleMode(null);
+              }}
             />
             <label
               className="form-check-label"
               htmlFor="flexSwitchCheckDefault"
             >
-              Enable Dark Mode
+              Toggle Mode
             </label>
-          </div>
+          </div> */}
           <form className="d-flex" role="search">
             <input
               className="form-control me-2"
